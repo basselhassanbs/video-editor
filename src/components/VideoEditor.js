@@ -28,7 +28,7 @@ const VideoEditor = () => {
       }
       ffmpeg.FS('writeFile', 'input.mp4', await fetchFile(videoFile));
 
-      const fontFile = await fetch('/Arial.ttf').then((res) =>
+      const fontFile = await fetch('./Arial.ttf').then((res) =>
         res.arrayBuffer()
       );
       ffmpeg.FS('writeFile', 'Arial.ttf', new Uint8Array(fontFile));
